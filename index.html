@@ -35,27 +35,11 @@
       .nav .nav-cta { color: var(--white); background: var(--ink); padding: 10px 16px; border-radius: 6px; }
       .nav .nav-cta:hover { background: var(--coral-dark); color: var(--white); }
 
-      .hero { min-height: 650px; display: grid; grid-template-columns: 1fr 0.86fr; gap: 60px; align-items: center; padding: 74px 0 96px; }
+      .hero { min-height: 650px; display: grid; place-items: center; padding: 74px 0 96px; text-align: center; }
       .eyebrow { color: var(--coral-dark); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
       h1, h2, h3 { font-family: "Space Grotesk", sans-serif; letter-spacing: -0.04em; line-height: 1.04; }
-      h1 { max-width: 650px; margin: 18px 0 24px; font-size: clamp(3.4rem, 7vw, 6.6rem); }
-      .hero-copy { max-width: 510px; margin: 0 0 32px; color: var(--muted); font-size: 1.14rem; }
-      .button { display: inline-flex; align-items: center; gap: 10px; border: 0; border-radius: 6px; padding: 14px 19px; background: var(--coral); color: #fff; font: inherit; font-weight: 700; text-decoration: none; }
-      .button:hover { background: var(--coral-dark); }
-      .button-arrow { font-size: 1.2rem; line-height: 0; }
-      .hero-note { margin: 20px 0 0; color: var(--muted); font-size: 0.82rem; }
-      .hero-art { position: relative; min-height: 420px; display: grid; place-items: center; }
-      .hero-art::before { content: ""; position: absolute; width: 340px; height: 340px; border-radius: 50%; background: var(--mint); }
-      .hero-art::after { content: ""; position: absolute; right: 4%; top: 7%; width: 92px; height: 92px; border-radius: 50%; background: var(--coral); }
-      .phone { position: relative; z-index: 1; width: 238px; height: 438px; padding: 10px; border: 7px solid var(--ink); border-radius: 33px; background: var(--ink); transform: rotate(7deg); box-shadow: 22px 25px 0 rgba(18, 34, 61, 0.1); }
-      .phone-screen { height: 100%; padding: 22px 17px; border-radius: 21px; background: #f5fbf8; }
-      .phone-top { display: flex; justify-content: space-between; font-size: 0.57rem; font-weight: 700; }
-      .phone-screen h3 { margin: 54px 0 8px; font-size: 1.42rem; }
-      .balance { margin: 0 0 28px; color: var(--muted); font-size: 0.73rem; }
-      .balance strong { display: block; color: var(--ink); font-family: "Space Grotesk", sans-serif; font-size: 2rem; }
-      .phone-action { padding: 14px; border-radius: 8px; background: var(--coral); color: white; font-size: 0.72rem; font-weight: 700; text-align: center; }
-      .phone-list { margin-top: 26px; padding-top: 18px; border-top: 1px solid #cddcd5; font-size: 0.69rem; }
-      .phone-list div { display: flex; justify-content: space-between; margin: 12px 0; }
+      h1 { max-width: 700px; margin: 18px 0 14px; font-size: clamp(3.8rem, 9vw, 8rem); }
+      .hero-tagline { margin: 0; color: var(--coral-dark); font-family: "Space Grotesk", sans-serif; font-size: clamp(1.25rem, 2.5vw, 1.8rem); font-weight: 600; letter-spacing: 0.08em; }
 
       .trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; color: var(--muted); font-size: 0.88rem; }
       .trust-items { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
@@ -98,11 +82,8 @@
         .site-header { padding: 18px 0; }
         .nav { gap: 14px; font-size: 0.8rem; }
         .nav a:not(.nav-cta) { display: none; }
-        .hero { grid-template-columns: 1fr; gap: 16px; min-height: auto; padding: 66px 0 70px; }
+        .hero { min-height: 520px; padding: 66px 0 70px; }
         h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
-        .hero-art { min-height: 360px; }
-        .hero-art::before { width: 270px; height: 270px; }
-        .phone { transform: rotate(5deg) scale(0.84); }
         .section, .app-section { padding: 76px 0; }
         .section-heading, .app-section { display: block; }
         .section-intro { margin-top: 22px; }
@@ -129,22 +110,8 @@
     <main>
       <section class="hero shell">
         <div>
-          <div class="eyebrow">New Zealand payments, rethought</div>
-          <h1>Payments should feel this simple.</h1>
-          <p class="hero-copy">Boing helps people connect their bank accounts, discover the right recipient, and send payments with confidence.</p>
-          <a class="button" href="#app">Discover Boing <span class="button-arrow" aria-hidden="true">&rarr;</span></a>
-          <p class="hero-note">The Boing app is coming soon to iOS and Android.</p>
-        </div>
-        <div class="hero-art" aria-label="Preview of the Boing mobile app">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="phone-top"><span>9:41</span><span>Boing</span></div>
-              <h3>Good morning.</h3>
-              <p class="balance">Available balance<strong>$1,248.50</strong></p>
-              <div class="phone-action">Send a payment</div>
-              <div class="phone-list"><div><span>Groceries</span><strong>-$82.40</strong></div><div><span>Salary</span><strong>+$2,100</strong></div></div>
-            </div>
-          </div>
+          <h1>Boing Systems</h1>
+          <p class="hero-tagline">secure.fast.simple</p>
         </div>
       </section>
 
