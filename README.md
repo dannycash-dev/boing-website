@@ -16,7 +16,7 @@ https://dannycash-dev.github.io/boing-website/
 
 - `index.html` - company homepage
 - `privacy.html` - privacy policy page
-- `assets/Boing_Logo.png` - Boing logo
+- `assets/boing_al_logo_title.png` - Boing logo with the website title color
 - `CNAME` - GitHub Pages custom domain configuration
 - `.github/workflows/pages.yml` - automatic GitHub Pages deployment
 
