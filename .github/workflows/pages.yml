@@ -2,7 +2,7 @@ name: Deploy website to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [public-site]
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: public-site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
