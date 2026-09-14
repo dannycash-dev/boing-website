@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 576" role="img" aria-labelledby="title desc">
+  <title id="title">Boing</title>
+  <desc id="desc">Boing blue logo with a white crossed symbol and wordmark</desc>
+  <rect width="1024" height="576" fill="#2474d1"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M475 262 422 209 412 198" stroke-width="28"/>
+    <path d="M549 262 602 209 612 198" stroke-width="28"/>
+    <path d="M475 310 422 363 412 374" stroke-width="28"/>
+    <path d="M549 310 602 363 612 374" stroke-width="28"/>
+    <circle cx="512" cy="286" r="43" stroke-width="18"/>
+    <circle cx="512" cy="180" r="35" stroke-width="14"/>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="512" y="197" font-size="54">B</text>
+    <text x="512" y="462" font-size="80" letter-spacing="4">BOING</text>
+  </g>
+</svg>

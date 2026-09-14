@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 670" role="img" aria-labelledby="title desc">
+  <title id="title">Boing</title>
+  <desc id="desc">Boing logo with a background matching the website title color</desc>
+  <defs>
+    <filter id="title-blue" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1.0487 0 0 0 -0.0486  0 1.5347 0 -0.5349  0 0 0 4.409 -3.409 0  0 0 0 1 0"/>
+    </filter>
+  </defs>
+  <image href="boing_al_logo.png" width="670" height="670" filter="url(#title-blue)"/>
+</svg>
