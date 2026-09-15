@@ -11,6 +11,8 @@
             --ink: #12223d;
             --paper: #f8f7f2;
             --coral: #c84e39;
+            --muted: #607084;
+            --line: #dce2e5;
         }
 
         * {
@@ -47,13 +49,131 @@
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
+
+        h2 {
+            margin: 42px 0 10px;
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .version {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .notice {
+            margin: 32px 0;
+            padding: 18px 20px;
+            border-left: 3px solid var(--coral);
+            background: #fff;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--line);
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #fff;
+        }
     </style>
 </head>
 
 <body>
     <main>
         <a class="back" href="../index.html">&larr; Back to Boing</a>
-        <h1>Complaints</h1>
+        <h1>Complaints Policy</h1>
+        <p class="version">Version 1.1 - prepared September 2026</p>
+        <div class="notice">Status: Draft for legal review - not yet published. Replace all bracketed placeholders,
+            confirm the named dispute resolution scheme and response timeframes, and have this reviewed by a lawyer
+            before it is linked from the app, published at boing.nz/complaints, or submitted as part of any MBIE /
+            Payments NZ Consumer Data Right accreditation application. This draft was prepared with reference to the
+            published Complaints page of Volley Payments Limited (volley.nz/complaints) and to Boing's Terms of Use and
+            Privacy Policy drafts.</div>
+
+        <h2>1. Have an issue and need help?</h2>
+        <p>Let us know and we'll do our best to fix your problem. Making a complaint to Boing is free.</p>
+
+        <h2>2. How to make a complaint</h2>
+        <p>You can make a complaint by:</p>
+        <ul>
+            <li>Emailing us at <a href="mailto:complaints@boing.nz">complaints@boing.nz</a></li>
+            <li>Filling out our <a href="../contact/">contact form at boing.nz/contact</a></li>
+        </ul>
+        <p>Please include your name, any relevant transaction details (such as the date, amount, and the phone number or
+            BoingID involved), and a description of the issue.</p>
+
+        <h2>3. What happens next?</h2>
+        <p>Once we receive your complaint, we will acknowledge it, then conduct a review. We will respond with the
+            results of our review within [10] working days and keep you informed if the review needs more time to
+            complete.</p>
+        <p>If your complaint relates to a payment made through open banking, we may need to contact your bank or the
+            recipient's bank as part of our review, and we will let you know if that's the case.</p>
+
+        <h2>4. If you're not satisfied with our response</h2>
+        <p>If we can't resolve your complaint, or you're not satisfied with the outcome, you can refer your complaint
+            free
+            of charge to [insert approved dispute resolution scheme Boing belongs to as a Financial Service Provider -
+            for example, the Financial Dispute Resolution Service (FDRS), Financial Services Complaints Limited (FSCL),
+            or the Insurance &amp; Financial Services Ombudsman Scheme (IFSO)]:</p>
+        <table class="dispute-resolution">
+            <caption>Dispute resolution scheme contact details</caption>
+            <tbody>
+                <tr>
+                    <th>Address</th>
+                    <td>[Insert scheme's postal address]</td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>[Insert scheme's phone number]</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>[Insert scheme's complaints email address]</td>
+                </tr>
+                <tr>
+                    <th>Website</th>
+                    <td>[Insert scheme's website]</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>As a reference point, Volley Payments Limited (a comparable NZ open banking payments provider) directs
+            unresolved complaints to the Financial Dispute Resolution Service, PO Box 2272, Wellington 6140, phone
+            0508 337 337, email complaints@fdrs.org.nz, fdrs.org.nz. Boing must confirm and join an approved dispute
+            resolution scheme as a condition of registering as a Financial Service Provider before this section is
+            finalised.</p>
+
+        <h2>5. Complaints about privacy</h2>
+        <p>If your complaint is specifically about how we've handled your personal information, you can also contact the
+            <a href="https://privacy.org.nz">Office of the Privacy Commissioner</a>, PO Box 10-094, The Terrace,
+            Wellington 6143, phone 0800 803 909, privacy.org.nz. See our <a href="../privacy.html">Privacy Policy</a>
+            for more detail on your privacy rights.
+        </p>
+
+        <h2>6. Complaints about our open banking accreditation</h2>
+        <p>If your complaint relates to Boing's obligations as an accredited third party under the Customer and Product
+            Data Act 2020, you can also raise it with the Ministry of Business, Innovation and Employment (MBIE) as the
+            Consumer Data Right regulator, once Boing is listed on the Register of Participants. [Insert MBIE contact
+            details / register link once Boing is accredited.]</p>
+
+        <h2>7. Contact us</h2>
+        <p>If you have any questions about this policy or want to make a complaint, contact us at <a
+                href="mailto:complaints@boing.nz">complaints@boing.nz</a>.</p>
     </main>
 </body>
 

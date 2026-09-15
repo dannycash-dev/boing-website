@@ -1,53 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Boing privacy policy." />
-    <title>Privacy Policy | Boing Systems Limited</title>
-    <style>
-      :root { --ink: #12223d; --muted: #607084; --paper: #f8f7f2; --coral: #c84e39; --line: #dce2e5; }
-      * { box-sizing: border-box; }
-      body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      main { width: min(720px, calc(100% - 36px)); margin: 0 auto; padding: 42px 0 80px; }
-      a { color: var(--coral); font-weight: 600; }
-      .back { text-decoration: none; font-size: 0.9rem; }
-      h1, h2 { font-family: Georgia, serif; letter-spacing: -0.03em; line-height: 1.1; }
-      h1 { margin: 58px 0 12px; font-size: clamp(2.7rem, 8vw, 4.5rem); }
-      h2 { margin: 42px 0 10px; font-size: 1.5rem; }
-      .updated { color: var(--muted); font-size: 0.9rem; }
-      .notice { margin: 32px 0; padding: 18px 20px; border-left: 3px solid var(--coral); background: #fff; }
-      footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <a class="back" href="index.html">&larr; Back to Boing</a>
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 3 September 2026</p>
-      <div class="notice">This policy describes how Boing handles personal information in connection with the Boing app and website.</div>
 
-      <h2>Information we collect</h2>
-      <p>We may collect information you provide when you create an account or contact us, including your name, phone number, and contact details. When you use payment and account-linking features, we may process information needed to provide those services, such as payment details, account identifiers, transaction records, and authorisation information.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Boing privacy policy." />
+  <title>Privacy Policy | Boing Limited</title>
+  <style>
+    :root {
+      --ink: #12223d;
+      --muted: #607084;
+      --paper: #f8f7f2;
+      --coral: #c84e39;
+      --line: #dce2e5;
+    }
 
-      <h2>How we use information</h2>
-      <p>We use information to provide and secure Boing, process requested payments, maintain account and transaction records, respond to support requests, prevent misuse, and improve our services. We do not sell personal information.</p>
+    * {
+      box-sizing: border-box;
+    }
 
-      <h2>Banking information</h2>
-      <p>When you connect a bank account, authorisation is handled through the relevant open-banking provider. Boing only accesses information and permissions you authorise, and uses it for the purpose described when you give consent.</p>
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-      <h2>Sharing information</h2>
-      <p>We may share information with service providers that help us operate Boing, with financial institutions or open-banking providers when needed to complete a requested service, or when required by law. We expect service providers to protect information and use it only for the agreed purpose.</p>
+    main {
+      width: min(720px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 42px 0 80px;
+    }
 
-      <h2>Security and retention</h2>
-      <p>We use reasonable technical and organisational safeguards to protect personal information. We retain information only for as long as needed for the purposes described here, to meet legal obligations, resolve disputes, and enforce agreements.</p>
+    a {
+      color: var(--coral);
+      font-weight: 600;
+    }
 
-      <h2>Your choices and questions</h2>
-      <p>You can contact us to ask about personal information we hold about you, request a correction, or raise a privacy concern. Email <a href="mailto:danny.cash@boing.nz">danny.cash@boing.nz</a>. We may need to verify your identity before responding.</p>
+    .back {
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
 
-      <h2>Changes to this policy</h2>
-      <p>We may update this policy as Boing develops. The latest version will be posted on this page with its updated date.</p>
-      <footer>&copy; 2026 Boing Systems Limited. New Zealand. &middot; <a href="mailto:danny.cash@boing.nz">Contact Boing Systems Limited</a></footer>
-    </main>
-  </body>
+    h1,
+    h2 {
+      font-family: Georgia, serif;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    h1 {
+      margin: 58px 0 12px;
+      font-size: clamp(2.7rem, 8vw, 4.5rem);
+    }
+
+    h2 {
+      margin: 42px 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .notice {
+      margin: 32px 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--coral);
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #fff;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a class="back" href="index.html">&larr; Back to Boing</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Version 1.2 - prepared September 2026</p>
+    <div class="notice">Status: Draft for legal review</div>
+
+    <p>This Privacy Policy explains how Boing Ltd (Boing, we, us, our), New Zealand company number 9452129, collects,
+      stores, uses, discloses and protects your personal information when you use the Boing app or our website,
+      including as an accredited third party under the Customer and Product Data Act 2020 and its open banking
+      regulations.</p>
+    <p>In this policy, personal information means information about an identifiable individual.</p>
+    <p>We collect, store, use and disclose your personal information as set out in this policy and where permitted by
+      applicable law. If you do not agree with this policy, please do not use Boing.</p>
+    <p>This policy should be read together with our <a href="terms-of-use/">Terms of Use</a>. It does not limit or
+      exclude any of your rights under the Privacy Act 2020 (the Act). For general information about your privacy
+      rights, see <a href="https://privacy.org.nz">privacy.org.nz</a>.</p>
+
+    <h2>1. About us and the role we play with your information</h2>
+    <p>Boing operates in New Zealand and is bound by the Act. When you use Boing, we generally decide how and why your
+      personal information is collected, used, held and disclosed - for example, when you create an account, link a
+      bank account, or make a payment. In those situations, Boing is responsible for handling your personal information
+      in accordance with this policy.</p>
+    <p>Where we handle personal information on the instructions of your bank, account provider, or a business you are
+      paying in connection with a specific payment, that organisation is responsible for how it uses the information it
+      receives. You should refer to that organisation's privacy policy for that part of the process.</p>
+
+    <h2>2. Information we collect</h2>
+    <p>When you sign up for a Boing account:</p>
+    <ul>
+      <li>your name, mobile phone number, and email address;</li>
+      <li>your chosen BoingID, if you set one;</li>
+      <li>the name, account number and account details of any bank account you link to Boing;</li>
+      <li>your device ID, mobile operating system, and IP address, so we can operate the app, keep it secure, and
+        investigate fraud or bot activity.</li>
+    </ul>
+    <p>When you use Boing to make or receive a payment:</p>
+    <ul>
+      <li>payment and transaction data - the date, time, amount, description, and the payer's and payee's phone number,
+        BoingID, name, and bank account details;</li>
+      <li>confirmation-of-payee information we retrieve from your bank to show a name check before a payment is sent;
+      </li>
+      <li>account balance and transaction information from your linked bank accounts, to the extent you authorise us to
+        access it and only as needed to provide the Boing feature you're using.</li>
+    </ul>
+    <p>From our website and when you contact us:</p>
+    <ul>
+      <li>information you give us in emails, support requests, or complaints;</li>
+      <li>IP address, browser and device information, and website usage patterns, including through cookies and
+        analytics tools (see clause 5).</li>
+    </ul>
+    <p>We do not use tracking technologies to build advertising profiles about you.</p>
+
+    <h2>3. Purpose limitation - why we collect and use your information</h2>
+    <p>Consistent with our obligations as an accredited third party, we collect and use personal information only for
+      purposes connected with providing, securing, supporting, and improving Boing, including:</p>
+    <ul>
+      <li>to create and verify your Boing account and BoingID;</li>
+      <li>to initiate payment consents on your instruction, and process payment requests sent to you;</li>
+      <li>to resolve a phone number or BoingID to the correct bank account, and show a name check to the payer before a
+        payment is sent;</li>
+      <li>to maintain a record of your Boing account activity;</li>
+      <li>to detect, investigate, and prevent fraud, scams, and misuse of the Boing service or the directory;</li>
+      <li>to meet our record-keeping, audit, and reporting obligations to the CDR accreditation register, Payments NZ,
+        and MBIE;</li>
+      <li>to comply with other legal obligations, including AML/CFT requirements where applicable;</li>
+      <li>to provide customer support and respond to your enquiries or complaints.</li>
+    </ul>
+    <p>When you authorise us to access information from your bank or account provider, that authorisation applies only
+      to the account information, payment consent, feature, and period you approve. You can withdraw or manage your
+      authorisation through the Boing app where that functionality is available, or by contacting us using the details
+      in clause 12.</p>
+    <p>We will not use your information for marketing purposes without your express permission, and we will not use it
+      for purposes unrelated to those listed above unless we have a lawful basis for doing so.</p>
+
+    <h2>4. How we collect personal information</h2>
+    <p>We collect personal information:</p>
+    <ul>
+      <li>directly from you, when you register, use the Boing app, or contact us;</li>
+      <li>from your bank or account provider, through the open banking APIs you authorise us to use, each time you link
+        an account, check a balance, or approve a payment consent;</li>
+      <li>from other Boing users, when someone sends a payment request to your phone number or BoingID, or shares your
+        details as part of a payment;</li>
+      <li>indirectly, through analytics, device information, and cookies as described in clause 5.</li>
+    </ul>
+    <p>We only request the categories and scope of information from your bank that we need to provide the specific Boing
+      feature you are using - we do not request broader access "just in case."</p>
+
+    <h2>5. Cookies and website analytics</h2>
+    <p>We use cookies and similar technologies on our website to help it function, keep it secure, and understand how
+      visitors use it, including through third-party analytics tools. You can disable cookies in your browser settings,
+      but some parts of our website or the Boing app may not work properly if you do.</p>
+
+    <h2>6. Disclosing your personal information</h2>
+    <p>We share the minimum personal information necessary. We may disclose it to:</p>
+    <ul>
+      <li>your bank or account provider, and the recipient's bank, in order to initiate or receive a payment consent;
+      </li>
+      <li>the person you are paying, or who is paying you - for example, your name and payment confirmation, as shown in
+        the app's name check step;</li>
+      <li>the CDR accreditation register, Payments NZ, and MBIE, where we are required to report to or provide records
+        to them under our accreditation;</li>
+      <li>service providers who host our infrastructure or provide analytics, acting only on our instructions and bound
+        by confidentiality and security obligations;</li>
+      <li>a regulator, law enforcement agency, or other person legally entitled to require the information from us;</li>
+      <li>any other person you have authorised us to share your information with.</li>
+    </ul>
+    <p>We aim to host Boing's cloud services in New Zealand where suitable New Zealand-based services are available and
+      meet our technical, security, resilience, and accreditation requirements. Some service providers may still be
+      located outside New Zealand, or may process personal information outside New Zealand, where a New Zealand option
+      is not available or does not meet those requirements. Where this is the case, we take reasonable steps before
+      disclosing personal information to ensure it will be protected by safeguards comparable to those required under
+      the Act.</p>
+    <p>We may also disclose information as part of a sale, merger, or restructuring of Boing's business, subject to the
+      new owner continuing to comply with this policy (or an equivalent policy) for information already held.</p>
+
+    <h2>7. Data retention</h2>
+    <p>We follow data minimisation principles: we only keep personal information for as long as we need it for the
+      purpose it was collected, then securely delete or anonymise it. Indicative retention periods are:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type of information</th>
+          <th>Retention period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account and profile information (name, phone number, BoingID)</td>
+          <td>For as long as your account is open, plus a short period after closure to allow account recovery</td>
+        </tr>
+        <tr>
+          <td>Payment and transaction records</td>
+          <td>For as long as required to meet accounting, dispute-resolution, accreditation, and any applicable AML/CFT
+            obligations</td>
+        </tr>
+        <tr>
+          <td>Device, IP address and app diagnostic logs</td>
+          <td>For as long as reasonably needed for security, fraud prevention, and incident investigation</td>
+        </tr>
+        <tr>
+          <td>Support and complaint correspondence</td>
+          <td>For as long as reasonably needed to respond to the matter and meet record-keeping obligations</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="notice">Before publishing this policy, we will confirm that our retention periods are consistent with our
+      accreditation conditions, AML/CFT obligations, the Limitation Act 2010, and any other applicable legal or
+      operational requirements.</p>
+
+    <h2>8. How we protect your information</h2>
+    <p>We take your security seriously and aim to meet the standards expected of an accredited third party under the
+      open banking regulations, including:</p>
+    <ul>
+      <li>encryption of data in transit (TLS) and at rest;</li>
+      <li>access controls and authentication for our systems and staff;</li>
+      <li>regular security review and, where applicable, independent audit of our systems;</li>
+      <li>incident management procedures for responding to a suspected security or privacy incident.</li>
+    </ul>
+    <p>No system is completely secure, and if you provide information to us over the internet, you do so at your own
+      risk. If we become aware of a privacy breach that has caused, or is likely to cause, serious harm, we will
+      investigate promptly and notify the Office of the Privacy Commissioner and affected individuals where the Act
+      requires us to do so. We will also notify any relevant open banking accreditation body where our accreditation
+      obligations require it.</p>
+
+    <h2>9. Your rights - accessing, correcting, and deleting your information</h2>
+    <p>Subject to the grounds for refusal set out in the Act, you have the right to access and request correction of the
+      personal information we hold about you. You may also ask us to delete your personal information or restrict
+      certain processing, although we may need to retain or continue using some information where permitted or required
+      by law.</p>
+    <p><strong>How to make a request:</strong> contact us using the details in clause 12, and provide enough information
+      for us to confirm your identity and understand your request. We may ask for identification to protect your privacy
+      before we act on a request.</p>
+    <p><strong>Timeframes:</strong> we will acknowledge your request within 5 working days and aim to respond in full
+      within 20 working days, as required by the Act. If a request is complex, we will tell you if we need more time.
+    </p>
+    <p>If we refuse a request, we will explain why and tell you how you can complain about that decision. Closing your
+      Boing account removes your phone number and BoingID from the directory. Some information may need to be retained
+      after account closure for the reasons set out in clause 7.</p>
+
+    <h2>10. Eligibility, children and young people</h2>
+    <p>Boing may be used by anyone who has a registered New Zealand bank account that is supported by Boing. This may
+      include children or young people, but they may need consent or approval from a parent, guardian, or their bank
+      before using Boing or linking a bank account. If we become aware that a child or young person is using Boing
+      without any consent or approval required by law, their bank, or our Terms of Use, we may restrict or close the
+      account and take steps to delete or limit the personal information we hold, subject to any legal or record-keeping
+      obligations.</p>
+
+    <h2>11. Complaints</h2>
+    <p>If you have a concern about how we've handled your personal information, contact us first using the details in
+      clause 12 and we will investigate and do our best to resolve it. If you're not satisfied with our response, you
+      can complain to:</p>
+    <ul>
+      <li>the <a href="https://privacy.org.nz">Office of the Privacy Commissioner</a>, PO Box 10-094, The Terrace,
+        Wellington 6143, phone 0800 803 909, privacy.org.nz; and/or</li>
+      <li>[insert approved dispute resolution scheme Boing belongs to as a Financial Service Provider - e.g. Financial
+        Services Complaints Limited (FSCL) or the Insurance &amp; Financial Services Ombudsman Scheme (IFSO)].</li>
+    </ul>
+
+    <h2>12. Contact us</h2>
+    <p>If you have any questions about this policy, or want to exercise your privacy rights, contact our Privacy Officer
+      at <a href="mailto:complaints@boing.nz">complaints@boing.nz</a>.</p>
+
+    <h2>13. Changes to this policy</h2>
+    <p>We may update this policy from time to time, including to reflect changes to Boing, changes in the law, or
+      changes to our accreditation obligations. We will publish the updated policy at <a
+        href="https://boing.nz/privacy">boing.nz/privacy</a> and update the version date at the top of the page.</p>
+    <p>Where a change is material, we will also notify you in the app or by email before it takes effect, except where
+      we need to make a change sooner to protect the security of your information or to comply with a change in the law.
+    </p>
+    <footer>&copy; 2026 Boing Limited. New Zealand. &middot; <a href="mailto:complaints@boing.nz">Contact Boing
+        Limited</a></footer>
+  </main>
+</body>
+
 </html>
