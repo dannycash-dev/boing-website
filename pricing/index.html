@@ -12,6 +12,7 @@
             --ink: #12223d;
             --paper: #f8f7f2;
             --coral: #c84e39;
+            --line: #dce2e5;
         }
 
         * {
@@ -48,6 +49,54 @@
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
+
+        .lead {
+            max-width: 640px;
+            margin: 0 0 48px;
+            font-family: Georgia, serif;
+            font-size: clamp(1.45rem, 3vw, 2rem);
+            line-height: 1.35;
+        }
+
+        .section {
+            border-top: 1px solid var(--line);
+            padding-top: 22px;
+        }
+
+        .section + .section {
+            margin-top: 42px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-family: Georgia, serif;
+            font-size: 1.55rem;
+            line-height: 1.2;
+        }
+
+        .section p {
+            max-width: 640px;
+            margin: 0 0 16px;
+            color: #3c4b61;
+        }
+
+        .options {
+            margin: 22px 0 0;
+            padding-left: 22px;
+            color: #3c4b61;
+        }
+
+        .options li {
+            margin: 10px 0;
+            padding-left: 4px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 22px;
+            margin-top: 24px;
+        }
     </style>
 </head>
 
@@ -55,6 +104,42 @@
     <main>
         <a class="back" href="../index.html">&larr; Back to Boing</a>
         <h1>Pricing</h1>
+        <p class="lead">Our goal is for Boing transactions to be free for everyone, whether you are sending money for
+            yourself or accepting it as a merchant.</p>
+
+        <section class="section" aria-labelledby="funding-heading">
+            <h2 id="funding-heading">A free-to-use foundation</h2>
+            <p>We do not want fees to get in the way of useful, everyday payments. Making transactions free is the
+                starting point we are working toward for both personal and merchant use.</p>
+            <p>Building and operating a reliable service still needs funding. We are exploring ways to support Boing
+                without quietly putting a charge on every transaction.</p>
+        </section>
+
+        <section class="section" aria-labelledby="shape-heading">
+            <h2 id="shape-heading">Help shape how Boing is funded</h2>
+            <p>We are open to users influencing the model. We could run a Polis-style process, or another user-led
+                approach, to understand what people think is fair and sustainable.</p>
+            <ul class="options">
+                <li>A voluntary app subscription for people who want to support Boing</li>
+                <li>A small transaction fee, if users prefer that over a subscription</li>
+                <li>Another idea proposed and supported by the people who use Boing</li>
+            </ul>
+            <p>These are possibilities, not final decisions. We will share the options clearly and listen before
+                settling on a pricing model.</p>
+            <div class="actions">
+                <a href="../contact/">Share a pricing idea</a>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="seed-heading">
+            <h2 id="seed-heading">Future seed fundraising</h2>
+            <p>External funding may help us build and launch Boing while keeping the product focused on affordable,
+                useful payments. There is no seed round open through this page yet, but we are interested in hearing
+                from people who would like updates about a future raise.</p>
+            <div class="actions">
+                <a href="../contact/">Register interest in future funding</a>
+            </div>
+        </section>
     </main>
 </body>
 
