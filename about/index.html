@@ -48,6 +48,43 @@
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
+
+        .lead {
+            max-width: 640px;
+            margin: 0 0 54px;
+            font-family: Georgia, serif;
+            font-size: clamp(1.45rem, 3vw, 2rem);
+            line-height: 1.35;
+        }
+
+        .principles {
+            display: grid;
+            gap: 34px;
+            margin-top: 34px;
+        }
+
+        .principle {
+            border-top: 1px solid #dce2e5;
+            padding-top: 18px;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            font-family: Georgia, serif;
+            font-size: 1.45rem;
+            line-height: 1.2;
+        }
+
+        .principle p,
+        .closing {
+            max-width: 620px;
+            margin: 0;
+            color: #3c4b61;
+        }
+
+        .closing {
+            margin-top: 52px;
+        }
     </style>
 </head>
 
@@ -55,6 +92,32 @@
     <main>
         <a class="back" href="../index.html">&larr; Back to Boing</a>
         <h1>About</h1>
+        <p class="lead">Open banking should be easy. Your financial data belongs in your hands, and using it should feel
+            clear, useful, and entirely up to you.</p>
+
+        <section class="principles" aria-label="What we believe">
+            <article class="principle">
+                <h2>Make it simple</h2>
+                <p>Money is already complicated enough. Boing is being built to make open banking easier to understand
+                    and easier to use, without burying the important details in jargon or friction.</p>
+            </article>
+
+            <article class="principle">
+                <h2>Your data, your say</h2>
+                <p>Your financial information is yours. You should know what is being shared, why it is needed, and who
+                    it is shared with. You stay in control of the permissions you give.</p>
+            </article>
+
+            <article class="principle">
+                <h2>Trust is part of the product</h2>
+                <p>We want Boing to be straightforward about how it works, careful with the information it handles, and
+                    honest about the choices available to you. Better financial tools start with better understanding.
+                </p>
+            </article>
+        </section>
+
+        <p class="closing">We are building Boing for a future where moving and using your money feels less like a maze
+            and more like something you can confidently own.</p>
     </main>
 </body>
 

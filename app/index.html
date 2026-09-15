@@ -12,6 +12,8 @@
             --ink: #12223d;
             --paper: #f8f7f2;
             --coral: #c84e39;
+            --blue: #2474d1;
+            --line: #dce2e5;
         }
 
         * {
@@ -48,6 +50,52 @@
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
+
+        .app-mark {
+            display: block;
+            width: 100%;
+            margin: 34px 0 40px;
+            border-radius: 4px;
+            box-shadow: 0 18px 40px rgba(18, 34, 61, 0.14);
+        }
+
+        .status {
+            display: inline-block;
+            margin: 0 0 16px;
+            padding: 6px 10px;
+            border: 1px solid var(--blue);
+            color: var(--blue);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .intro {
+            max-width: 600px;
+            border-top: 1px solid var(--line);
+            padding-top: 24px;
+        }
+
+        .intro h2 {
+            margin: 0 0 12px;
+            font-family: Georgia, serif;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+
+        .intro p {
+            margin: 0;
+            color: #3c4b61;
+            font-size: 1.08rem;
+        }
+
+        @media (max-width: 560px) {
+            .app-mark {
+                margin: 28px 0 32px;
+            }
+        }
     </style>
 </head>
 
@@ -55,6 +103,13 @@
     <main>
         <a class="back" href="../index.html">&larr; Back to Boing</a>
         <h1>App</h1>
+        <img class="app-mark" src="../assets/Boing_Logo.svg" alt="Boing bright blue logo" />
+        <section class="intro" aria-labelledby="development-heading">
+            <p class="status">In Development</p>
+            <h2 id="development-heading">A simpler way to move money is on its way.</h2>
+            <p>We are building the Boing app now, with a focus on making everyday payments feel clear, quick, and
+                easier to manage. This page will be updated when the app is ready to try.</p>
+        </section>
     </main>
 </body>
 
