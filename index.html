@@ -77,6 +77,28 @@
       text-decoration: none;
     }
 
+    .account-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .profile-icon {
+      display: inline-flex;
+      width: 17px;
+      height: 17px;
+    }
+
+    .profile-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
     .nav a:hover {
       color: var(--ink);
     }
@@ -422,7 +444,12 @@
   <header class="site-header shell">
     <a href="index.html" aria-label="Boing home"><img class="wordmark" src="assets/boinglogo7.png" alt="Boing" /></a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a>
+      <a href="about/">About</a>
+      <a href="system-status/" class="account-link"><span class="profile-icon" aria-hidden="true"><svg
+            viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M5.5 20c.7-3.3 3-5 6.5-5s5.8 1.7 6.5 5"></path>
+          </svg></span>My Account</a>
       <a href="contact/" class="nav-cta">Get in touch</a>
     </nav>
   </header>
@@ -483,7 +510,7 @@
     <div class="footer-row shell"><span>&copy; 2026 Boing Systems Limited. New Zealand.</span>
       <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms-of-use/">Terms of use</a><a
           href="complaints/">Complaints</a><a href="contact/">Contact</a><a href="about/">About</a><a
-          href="system-status/">System status</a><a href="pricing/">Pricing</a><a href="app/">App</a></div>
+          href="pricing/">Pricing</a><a href="app/">App</a></div>
     </div>
   </footer>
 </body>
