@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../assets/boinglogo7.png" />
-    <meta name="description" content="Boing system status." />
-    <title>System Status | Boing Systems Limited</title>
+    <meta name="description" content="Manage your Boing account and view account activity." />
+    <title>My Account | Boing Systems Limited</title>
     <style>
         :root {
             --ink: #12223d;
             --paper: #f8f7f2;
             --coral: #c84e39;
+            --muted: #536178;
+            --line: #dce2e5;
+            --white: #ffffff;
         }
 
         * {
@@ -26,7 +29,7 @@
         }
 
         main {
-            width: min(720px, calc(100% - 36px));
+            width: min(920px, calc(100% - 36px));
             margin: 0 auto;
             padding: 42px 0 80px;
         }
@@ -41,12 +44,207 @@
             font-size: 0.9rem;
         }
 
+        .intro {
+            margin: 58px 0 36px;
+        }
+
         h1 {
-            margin: 58px 0 12px;
+            margin: 0 0 12px;
             font-family: Georgia, serif;
             font-size: clamp(2.7rem, 8vw, 4.5rem);
             letter-spacing: -0.03em;
             line-height: 1.1;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .login-panel,
+        .dashboard {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: clamp(24px, 5vw, 42px);
+        }
+
+        .login-panel {
+            max-width: 520px;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            font-family: Georgia, serif;
+            font-size: 1.7rem;
+            line-height: 1.2;
+        }
+
+        .panel-copy {
+            margin: 0 0 28px;
+            color: var(--muted);
+        }
+
+        .field {
+            display: grid;
+            gap: 7px;
+            margin-bottom: 18px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid #bfc8d0;
+            border-radius: 5px;
+            padding: 12px 13px;
+            color: var(--ink);
+            background: var(--paper);
+            font: inherit;
+        }
+
+        input:focus {
+            outline: 3px solid rgba(200, 78, 57, 0.2);
+            border-color: var(--coral);
+        }
+
+        button {
+            border: 0;
+            border-radius: 5px;
+            padding: 12px 17px;
+            color: var(--white);
+            background: var(--ink);
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+        }
+
+        button:hover {
+            background: var(--coral);
+        }
+
+        .demo-note,
+        .form-message {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .demo-note {
+            margin: 22px 0 0;
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+
+        .form-message {
+            min-height: 1.5em;
+            margin: 14px 0 0;
+        }
+
+        .dashboard {
+            display: grid;
+            gap: 34px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 24px;
+        }
+
+        .dashboard-header p {
+            margin: 4px 0 0;
+            color: var(--muted);
+        }
+
+        .sign-out {
+            color: var(--coral);
+            background: transparent;
+            border: 1px solid var(--coral);
+            white-space: nowrap;
+        }
+
+        .sign-out:hover {
+            color: var(--white);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .account-section {
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+        }
+
+        .account-section h3 {
+            margin: 0 0 14px;
+            font-size: 1rem;
+        }
+
+        .activity-list,
+        .control-list {
+            display: grid;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .activity-list li,
+        .control-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            border-bottom: 1px solid #edf0f1;
+            padding-bottom: 12px;
+        }
+
+        .activity-list li:last-child,
+        .control-list li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .activity-list span,
+        .control-list span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .control-list a {
+            color: var(--coral);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        [hidden] {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+
+            .dashboard-header,
+            .dashboard-grid {
+                display: block;
+            }
+
+            .dashboard-header .sign-out {
+                margin-top: 18px;
+            }
+
+            .account-section+.account-section {
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
@@ -54,8 +252,120 @@
 <body>
     <main>
         <a class="back" href="../index.html">&larr; Back to Boing</a>
-        <h1>System Status</h1>
+
+        <header class="intro">
+            <h1>My Account</h1>
+            <p>Keep track of your Boing activity and stay in control of your profile, security, and linked accounts.</p>
+        </header>
+
+        <section class="login-panel" id="login-panel" aria-labelledby="login-heading">
+            <h2 id="login-heading">Sign in to Boing</h2>
+            <p class="panel-copy">Use your BoingID and password to access your account.</p>
+            <form id="login-form">
+                <div class="field">
+                    <label for="boing-id">BoingID</label>
+                    <input id="boing-id" name="boing-id" autocomplete="username" required />
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required />
+                </div>
+                <button type="submit">Continue</button>
+                <p class="form-message" id="login-message" role="alert"></p>
+            </form>
+            <p class="demo-note">Prototype sign-in: BoingID <strong>mc.bob</strong> and password <strong>aidan</strong>.
+                Authentication will be connected to the backend later.</p>
+        </section>
+
+        <section class="login-panel" id="two-factor-panel" aria-labelledby="two-factor-heading" hidden>
+            <h2 id="two-factor-heading">Verify it is you</h2>
+            <p class="panel-copy">Enter the 2FA code sent to your registered device.</p>
+            <form id="two-factor-form">
+                <div class="field">
+                    <label for="two-factor-code">2FA code</label>
+                    <input id="two-factor-code" name="two-factor-code" inputmode="numeric" autocomplete="one-time-code"
+                        pattern="[0-9]{4}" maxlength="4" required />
+                </div>
+                <button type="submit">Verify and open account</button>
+                <p class="form-message" id="two-factor-message" role="alert"></p>
+            </form>
+            <p class="demo-note">Prototype 2FA code: <strong>2222</strong>. This temporary code is for the frontend demo
+                only.</p>
+        </section>
+
+        <section class="dashboard" id="dashboard" aria-labelledby="dashboard-heading" hidden>
+            <div class="dashboard-header">
+                <div>
+                    <h2 id="dashboard-heading">Welcome, mc.bob</h2>
+                    <p>Your Boing account at a glance.</p>
+                </div>
+                <button class="sign-out" id="sign-out" type="button">Sign out</button>
+            </div>
+            <div class="dashboard-grid">
+                <section class="account-section" aria-labelledby="activity-heading">
+                    <h3 id="activity-heading">Recent activity</h3>
+                    <ul class="activity-list">
+                        <li><strong>Signed in</strong><span>Today, 9:42 am</span></li>
+                        <li><strong>Payment sent</strong><span>Yesterday, $48.20</span></li>
+                        <li><strong>Bank account checked</strong><span>Monday, 4:18 pm</span></li>
+                    </ul>
+                </section>
+                <section class="account-section" aria-labelledby="controls-heading">
+                    <h3 id="controls-heading">Account controls</h3>
+                    <ul class="control-list">
+                        <li><strong>Profile and BoingID</strong><a href="#profile">Manage</a></li>
+                        <li><strong>Linked bank accounts</strong><a href="#linked-accounts">Manage</a></li>
+                        <li><strong>Password and 2FA</strong><a href="#security">Manage</a></li>
+                    </ul>
+                </section>
+            </div>
+        </section>
     </main>
+
+    <script>
+        const loginPanel = document.querySelector('#login-panel');
+        const twoFactorPanel = document.querySelector('#two-factor-panel');
+        const dashboard = document.querySelector('#dashboard');
+        const loginForm = document.querySelector('#login-form');
+        const twoFactorForm = document.querySelector('#two-factor-form');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const boingId = document.querySelector('#boing-id').value;
+            const password = document.querySelector('#password').value;
+            const message = document.querySelector('#login-message');
+
+            if (boingId === 'mc.bob' && password === 'aidan') {
+                loginPanel.hidden = true;
+                twoFactorPanel.hidden = false;
+                document.querySelector('#two-factor-code').focus();
+            } else {
+                message.textContent = 'That BoingID or password is not recognised.';
+            }
+        });
+
+        twoFactorForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const code = document.querySelector('#two-factor-code').value;
+            const message = document.querySelector('#two-factor-message');
+
+            if (code === '2222') {
+                twoFactorPanel.hidden = true;
+                dashboard.hidden = false;
+            } else {
+                message.textContent = 'Enter the four-digit verification code to continue.';
+            }
+        });
+
+        document.querySelector('#sign-out').addEventListener('click', () => {
+            dashboard.hidden = true;
+            loginPanel.hidden = false;
+            loginForm.reset();
+            twoFactorForm.reset();
+            document.querySelector('#login-message').textContent = '';
+            document.querySelector('#two-factor-message').textContent = '';
+        });
+    </script>
 </body>
 
 </html>
